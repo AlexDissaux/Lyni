@@ -16,7 +16,7 @@ applyTo: '**'
 - **Monorepo**: Nx 21.5.2 workspace
 - **Language**: TypeScript 5.9.2
 - **Package Manager**: npm
-- **Node.js**: v20.19.9
+- **Node.js**: v22.19.0
 
 ### Backend (API)
 - **Framework**: NestJS 11.0.0
