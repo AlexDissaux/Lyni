@@ -46,6 +46,10 @@ Use the plugin's generator to create new projects. For example, to create a new 
 # Generate an app
 npx nx g @nx/next:app demo
 
+# create a new nest app : 
+mkdir apps/<newApp>
+nx g @nx/nest:app --name="<newApp>" --directory="apps/<newApp>"
+
 # Generate a library
 npx nx g @nx/next:lib some-lib
 ```
