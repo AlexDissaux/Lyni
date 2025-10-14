@@ -6,9 +6,10 @@ import { UserService } from './user/user.service';
 import { UserModule } from './user/user.module';
 import { LoggerMiddleware } from './logger.middleware';
 import { ChatModule } from './chat/chat.module';
+import { AuthModule } from './auth/auth.module';
 
 @Module({
-  imports: [UserModule, ChatModule],
+  imports: [UserModule, ChatModule, AuthModule],
   controllers: [AppController],
   providers: [AppService],
 })
