@@ -37,14 +37,15 @@ While you could add new projects to your workspace manually, you might want to l
 
 To install a new plugin you can use the `nx add` command. Here's an example of adding the React plugin:
 ```sh
-npx nx add @nx/next
+npx nx add @nx/react
 ```
 
 Use the plugin's generator to create new projects. For example, to create a new React app or library:
 
 ```sh
 # Generate an app
-npx nx g @nx/next:app demo
+mkdir apps/web
+npx nx g @nx/react:app web --name"web" --directory="apps/web"
 
 # create a new nest app : 
 mkdir apps/<newApp>
