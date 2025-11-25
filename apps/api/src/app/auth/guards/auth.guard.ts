@@ -11,20 +11,20 @@ export class AuthGuard implements CanActivate {
 
     canActivate(context: ExecutionContext): boolean | Promise<boolean> | Observable<boolean> {
         const request = context.switchToHttp().getRequest();
-        const token = this.extractTokenFromHeader(context.switchToHttp().getRequest())
+        const token = this.extractTokenFromHeader(request)
         if (!token) {
             throw new UnauthorizedException();
         }
         try {
-        const payload = this.jwtService.verify(
-            token,
-            {
-            secret: jwtConstants.secret
-            }
-        );
-        // 💡 We're assigning the payload to the request object here
-        // so that we can access it in our route handlers
-        request['user'] = payload;
+            const payload = this.jwtService.verify(
+                token,
+                {
+                secret: jwtConstants.secret
+                }
+            );
+            // 💡 We're assigning the payload to the request object here
+            // so that we can access it in our route handlers
+            request['user'] = payload;
         } catch (error){
             throw new UnauthorizedException();
         }

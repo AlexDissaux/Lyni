@@ -31,7 +31,7 @@ export class ChatGateway implements OnGatewayConnection, OnGatewayDisconnect {
         @MessageBody() data: string,
         @ConnectedSocket() client: Socket
     ) {
-        this.logger.log(`📩 Message reçu de ${client.id}: ${data}`);
+        this.logger.log(`Message reçu de ${client.id}: ${data}`);
         
         // Réponse simple au client - NestJS gère automatiquement l'émission
         // return data;

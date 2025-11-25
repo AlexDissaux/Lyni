@@ -6,9 +6,6 @@
 
 Run `npx nx graph` to visually explore what got created. Now, let's get you up to speed!
 
-## Official doc from NX
-https://nx.dev/technologies/react/next/introduction
-https://nx.dev/technologies/react/next/introduction
 
 
 
